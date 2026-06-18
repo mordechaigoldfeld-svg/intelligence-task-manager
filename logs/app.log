@@ -1,1 +1,63 @@
 2026-06-18 10:58:02,693 | INFO | test login
+2026-06-18 11:15:16,001 | INFO | test login
+2026-06-18 11:15:16,609 | INFO | test login
+2026-06-18 11:15:57,312 | INFO | test login
+2026-06-18 11:16:18,240 | INFO | trying to get by id
+2026-06-18 11:16:18,245 | INFO | succes get
+2026-06-18 11:16:27,148 | INFO | trying to get by id
+2026-06-18 11:16:27,162 | ERROR | id not found
+2026-06-18 11:16:54,341 | INFO | test login
+2026-06-18 11:16:56,279 | INFO | test login
+2026-06-18 11:17:02,738 | INFO | test login
+2026-06-18 11:19:24,440 | INFO | trying to get all
+2026-06-18 11:20:22,733 | INFO | trying to get all
+2026-06-18 11:20:32,401 | INFO | trying to get all
+2026-06-18 11:25:09,881 | INFO | trying to update id:2
+2026-06-18 11:26:38,040 | INFO | trying to update id:2
+2026-06-18 11:26:52,908 | INFO | trying to update id:2
+2026-06-18 11:29:00,202 | INFO | trying to update id:2
+2026-06-18 11:29:00,227 | ERROR | not updated
+2026-06-18 11:29:08,062 | INFO | trying to update id:2
+2026-06-18 11:29:08,081 | INFO | success updated id:2
+2026-06-18 11:33:39,676 | INFO | trying to deactivate id:3
+2026-06-18 11:33:39,722 | INFO | success deactivate 3
+2026-06-18 11:33:42,374 | INFO | trying to deactivate id:3
+2026-06-18 11:33:42,380 | ERROR | id not found
+2026-06-18 11:35:17,800 | INFO | trying to deactivate id:3
+2026-06-18 11:35:17,826 | ERROR | id not found
+2026-06-18 11:39:25,944 | INFO | trying to get performance
+2026-06-18 11:39:25,973 | INFO | success get
+2026-06-18 11:39:37,365 | INFO | trying to get performance
+2026-06-18 11:39:37,373 | INFO | success get
+2026-06-18 11:39:41,592 | INFO | trying to get performance
+2026-06-18 11:39:41,600 | INFO | success get
+2026-06-18 11:40:47,619 | INFO | trying to get performance
+2026-06-18 11:41:09,656 | INFO | trying to get performance
+2026-06-18 11:41:09,685 | INFO | success get
+2026-06-18 11:41:12,058 | INFO | trying to get performance
+2026-06-18 11:41:12,065 | INFO | success get
+2026-06-18 11:41:42,066 | INFO | trying to get performance
+2026-06-18 11:41:42,074 | INFO | success get
+2026-06-18 11:42:30,531 | INFO | trying to get performance
+2026-06-18 11:42:44,884 | INFO | trying to get performance
+2026-06-18 11:42:44,915 | INFO | success get
+2026-06-18 11:42:51,218 | INFO | trying to get performance
+2026-06-18 11:42:51,225 | ERROR | id not found
+2026-06-18 11:47:56,488 | INFO | trying to create a new agent
+2026-06-18 11:47:56,555 | INFO | success created
+2026-06-18 12:08:59,793 | INFO | trying to get status
+2026-06-18 12:10:43,845 | INFO | trying to get status
+2026-06-18 12:11:31,750 | INFO | trying to get status
+2026-06-18 12:12:15,712 | INFO | trying to get status
+2026-06-18 12:14:26,111 | INFO | trying to get status
+2026-06-18 12:14:26,147 | INFO | success get
+2026-06-18 12:16:44,584 | INFO | try to get top agent
+2026-06-18 12:16:44,609 | INFO | succes get
+2026-06-18 12:23:49,841 | INFO | triyng to get all missions
+2026-06-18 12:23:49,842 | INFO | succes get
+2026-06-18 12:27:01,797 | INFO | trying to create a new mission
+2026-06-18 12:27:01,850 | INFO | success created
+2026-06-18 12:31:07,741 | INFO | trying to get id :2
+2026-06-18 12:31:07,765 | INFO | success get
+2026-06-18 12:31:13,488 | INFO | trying to get id :234
+2026-06-18 12:31:13,492 | ERROR | failed get
