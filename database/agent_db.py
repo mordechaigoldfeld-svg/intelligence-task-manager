@@ -52,14 +52,17 @@ class AgentDB:
     def update_agent_by_id(self,id,body:AgentData):
         connection =self.db.get_connection()
         cursor=self.db.connection.cursor(dictionary=True)
-        cursor.execute("update agents set name=%s, specialty=%s , agent_rank=%s ,is_active=False where id=%s;",(body.name,body.specialty,body.agent_rank,id))
-        connection.commit()
-        return cursor.rowcount
+        agent=self.get_agent_by_id(id)
+        if agent:
+            cursor.execute("update agents set name=%s, specialty=%s , agent_rank=%s ,is_active=False where id=%s;",(body.name,body.specialty,body.agent_rank,id))
+            connection.commit()
+            return cursor.rowcount
+        return 2
     
     
     
     
-    def desactive_agent(self,id:int):
+    def desactive_agent(self,id):
         connection = self.db.get_connection()
         cursor=self.db.connection.cursor(dictionary=True)
         cursor.execute("update agents set is_active=False where id=%s;",(id,))
@@ -87,17 +90,17 @@ class AgentDB:
     
     
     
-    def get_agent_performance(self,id:int):
-        connection=self.db.get_connection()
-        cursor=self.db.connection.cursor(dictionary=True)
-        cursor.execute("select failed_missions,completed_missions from agents where id=%s;",(id,))
-        perform = cursor.fetchall()
-        cursor.execute("select failed_missions+completed_missions as total_missions from agents where id=%s;",(id,))
-        perform.append(cursor.fetchone())
-        # return milon
-        if perform[0]:
-            return perform
-        return None
+    # def get_agent_performance(self,id:int):
+    #     connection=self.db.get_connection()
+    #     cursor=self.db.connection.cursor(dictionary=True)
+    #     cursor.execute("select failed_missions,completed_missions from agents where id=%s;",(id,))
+    #     perform = cursor.fetchall()
+    #     cursor.execute("select failed_missions+completed_missions as total_missions from agents where id=%s;",(id,))
+    #     perform.append(cursor.fetchone())
+    #     # return milon
+    #     if perform[0]:
+    #         return perform
+    #     return None
         
         
     
@@ -114,10 +117,14 @@ class AgentDB:
         cursor=self.db.connection.cursor(dictionary=True)
         cursor.execute("select failed_missions,completed_missions from agents where id=%s;",(id,))
         first_data = cursor.fetchone()
-        
-        # cursor.execute("select failed_missions+completed_missions as total_missions from agents where id=%s;",(id,))
-        # perform.append(cursor.fetchone())
-        return first_data
+        cursor.execute("select count(*) as total_missions from missions where assigned_agent_id=%s;",(id,))
+        total=cursor.fetchone()["total_missions"]
+        completed=first_data["completed_missions"]
+        if total !=0:
+            success=round((completed/total)*100,2)
+            perform={"completed":completed,"failed":first_data["failed_missions"],"total":total,"success_rate":success}
+            return perform
+        return None
         # if perform[0]:
         #     return perform
         # return None

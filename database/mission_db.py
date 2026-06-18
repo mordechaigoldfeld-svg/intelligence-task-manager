@@ -6,31 +6,34 @@ class MisssionDB:
     def __init__(self,db:DB_connection):
         self.db=db
     
-    def create_mission(self,data:MissionsData):
-        try:
-            connection=self.db.get_connection()
-            cursor=self.db.connection.cursor(dictionary=True)
-            cursor.execute("insert into missions(title,description,location,difficulty,importance,status) values (%s,%s,%s,%s,%s,%s);",(data.title,data.description,data.location,data.difficulty,data.importance,data.status))
-            connection.commit()
+    # def create_mission(self,data:MissionsData):
+    #     try:
+    #         connection=self.db.get_connection()
+    #         cursor=self.db.connection.cursor(dictionary=True)
+    #         cursor.execute("insert into missions(title,description,location,difficulty,importance,status) values (%s,%s,%s,%s,%s,%s);",(data.title,data.description,data.location,data.difficulty,data.importance,data.status))
+    #         connection.commit()
             
-            agent_id=cursor.lastrowid
+    #         agent_id=cursor.lastrowid
             
-            cursor.execute("select * from missions where id=%s;",(agent_id,))
+    #         cursor.execute("select * from missions where id=%s;",(agent_id,))
             
-            agent=cursor.fetchone()
+    #         agent=cursor.fetchone()
             
-            return agent
-        except Exception as e:
-            return {"error":f"{e}"}
+    #         return agent
+    #     except Exception as e:
+    #         return {"error":f"{e}"}
         
         
         
            
     def get_all_missions(self):
-        connection=self.db.get_connection()
-        cursor=self.db.connection.cursor(dictionary=True)
-        cursor.execute("select * from missions;")
-        return cursor.fetchall()
+        try:
+            connection=self.db.get_connection()
+            cursor=self.db.connection.cursor(dictionary=True)
+            cursor.execute("select * from missions;")
+            return cursor.fetchall()
+        except Exception as e:
+            return {"error":e}
     
     
     
@@ -59,8 +62,19 @@ class MisssionDB:
         connection.commit()
         return cursor.rowcount
     
-    def get_open_missions_by_agent(self,id):
+    
+    # def get_open_missions_by_agent(self,id):
+    #     connection=self.db.get_connection()
+    #     cursor=self.db.connection.cursor(dictionary=True)
+    #     cursor.execute("select status from missions;")
+    #     return cursor.fetchone()
+    #       select count(assigned_agent_id) as total_completed from missions where status='completed';
+    
+    
+    
+    def valid_assing():
         pass
+    
     
     
     
@@ -100,7 +114,7 @@ class MisssionDB:
     def get_top_agent(self):
         connection=self.db.get_connection()
         cursor=self.db.connection.cursor(dictionary=True)
-        cursor.execute("select assigned_agent_id as agent_id,count(*) as completed_missions from missions group by assigned_agent_id order by completed_missions desc limit 1")
+        cursor.execute("select assigned_agent_id as agent_id,count(*) as completed_missions from missions where status='completed' group by assigned_agent_id order by completed_missions desc limit 1")
         return cursor.fetchone()
     
  
@@ -108,41 +122,39 @@ class MisssionDB:
  
  
     
-    # def create_mission(self,data:MissionsData):
-    #     try:
-    #         connection=self.db.get_connection()
-    #         cursor=self.db.connection.cursor(dictionary=True)
+    def create_mission(self,data:MissionsData):
+        try:
+            connection=self.db.get_connection()
+            cursor=self.db.connection.cursor(dictionary=True)
             
             
-    #         first_data=data.model_dump()
+            first_data=data.model_dump()
             
-    #         difficulty=first_data["difficulty"]
-    #         importance=first_data["importance"]
+            difficulty=first_data["difficulty"]
+            importance=first_data["importance"]
             
-    #         risk_level_num=(difficulty*2)+importance
+            risk_level_num=(difficulty*2)+importance
             
-    #         # if risk_level_num>1 and risk_level<=9:
-    #         #     risk_level="LOW"
-    #         # elif risk_level_num >9 and risk_level_num<=17:
-    #         #     risk_level="MEDIUM"
-    #         # elif risk_level_num >18 and risk_level_num<=24:
-    #         #     risk_level="HIGH" 
-    #         # else:
-    #         #     risk_level="CRITICAL"
-            
-    #         first_data["risk_level"]=risk_level
+            if risk_level_num>1 and risk_level_num<=9:
+                risk_level="LOW"
+            elif risk_level_num >9 and risk_level_num<=17:
+                risk_level="MEDIUM"
+            elif risk_level_num >18 and risk_level_num<=24:
+                risk_level="HIGH" 
+            else:
+                risk_level="CRITICAL"
             
             
-    #         # cursor.execute("insert into missions(title,description,location,difficulty,importance,status,risk_level) values (%s,%s,%s,%s,%s,%s,%s);",(first_data["title"],first_data["description"],first_data["location"],first_data["difficulty"],first_data["importance"],first_data["status"],first_data["risk_level"]))
-    #         # connection.commit()
+            cursor.execute("insert into missions(title,description,location,difficulty,importance,status,risk_level) values (%s,%s,%s,%s,%s,%s,%s);",(first_data["title"],first_data["description"],first_data["location"],first_data["difficulty"],first_data["importance"],first_data["status"],risk_level))
+            connection.commit()
             
-    #         # agent_id=cursor.lastrowid
+            agent_id=cursor.lastrowid
             
-    #         # cursor.execute("select * from missions where id=%s;",(agent_id,))
+            cursor.execute("select * from missions where id=%s;",(agent_id,))
             
-    #         # agent=cursor.fetchone()
+            agent=cursor.fetchone()
             
-    #         return first_data
-    #     except Exception as e:
-    #         return {"error":f"{e}"}
+            return agent
+        except Exception as e:
+            return {"error":f"{e}"}
         

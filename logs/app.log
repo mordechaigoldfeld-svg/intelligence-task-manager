@@ -61,3 +61,118 @@
 2026-06-18 12:31:07,765 | INFO | success get
 2026-06-18 12:31:13,488 | INFO | trying to get id :234
 2026-06-18 12:31:13,492 | ERROR | failed get
+2026-06-18 12:44:19,876 | INFO | trying to get performance
+2026-06-18 12:44:19,899 | INFO | success get
+2026-06-18 14:48:06,546 | INFO | trying to update id:345
+2026-06-18 14:48:06,668 | ERROR | not updated
+2026-06-18 14:48:11,111 | INFO | trying to update id:345
+2026-06-18 14:48:11,118 | ERROR | not updated
+2026-06-18 14:49:53,114 | INFO | trying to update id:345
+2026-06-18 14:49:53,121 | ERROR | not updated
+2026-06-18 14:50:01,452 | INFO | trying to update id:3
+2026-06-18 14:50:01,461 | ERROR | not updated
+2026-06-18 14:51:33,310 | INFO | trying to update id:311
+2026-06-18 14:51:50,467 | INFO | trying to update id:311
+2026-06-18 14:52:41,284 | INFO | trying to update id:311
+2026-06-18 14:52:41,326 | ERROR | not updated
+2026-06-18 14:57:53,429 | INFO | trying to update id:311
+2026-06-18 14:57:53,474 | INFO | success updated id:311
+2026-06-18 14:58:28,656 | INFO | trying to update id:311
+2026-06-18 14:58:28,692 | ERROR | id not found
+2026-06-18 14:58:35,898 | INFO | trying to update id:3
+2026-06-18 14:58:35,913 | ERROR | not updated
+2026-06-18 15:02:37,733 | INFO | trying to deactivate id:123
+2026-06-18 15:02:37,774 | ERROR | agent not found
+2026-06-18 15:02:45,671 | INFO | trying to deactivate id:3
+2026-06-18 15:02:45,685 | ERROR | agent alrredy deactivate
+2026-06-18 15:02:51,335 | INFO | trying to deactivate id:4
+2026-06-18 15:02:51,404 | INFO | success deactivate 4
+2026-06-18 15:03:04,890 | INFO | trying to get performance
+2026-06-18 15:03:23,748 | INFO | trying to get performance
+2026-06-18 15:05:10,396 | INFO | trying to get performance
+2026-06-18 15:05:10,450 | INFO | success get
+2026-06-18 15:05:55,398 | INFO | trying to get performance
+2026-06-18 15:05:55,406 | INFO | success get
+2026-06-18 15:07:04,434 | INFO | trying to get performance
+2026-06-18 15:07:04,482 | INFO | success get
+2026-06-18 15:07:18,069 | INFO | trying to get performance
+2026-06-18 15:07:18,078 | INFO | success get
+2026-06-18 15:15:49,575 | INFO | trying to get performance
+2026-06-18 15:16:40,329 | INFO | trying to get performance
+2026-06-18 15:17:48,969 | INFO | trying to get performance
+2026-06-18 15:18:26,921 | INFO | trying to get performance
+2026-06-18 15:18:55,230 | INFO | trying to get performance
+2026-06-18 15:19:40,662 | INFO | trying to get performance
+2026-06-18 15:19:40,708 | INFO | success get
+2026-06-18 15:20:01,173 | INFO | trying to get performance
+2026-06-18 15:20:01,187 | INFO | success get
+2026-06-18 15:20:46,927 | INFO | trying to get performance
+2026-06-18 15:20:46,941 | ERROR | divide by zero
+2026-06-18 15:20:57,026 | INFO | trying to get performance
+2026-06-18 15:20:57,046 | ERROR | divide by zero
+2026-06-18 15:22:50,850 | INFO | trying to get status
+2026-06-18 15:22:50,904 | INFO | success get
+2026-06-18 15:23:21,067 | INFO | try to get top agent
+2026-06-18 15:23:21,078 | INFO | succes get
+2026-06-18 15:23:24,531 | INFO | try to get top agent
+2026-06-18 15:23:24,536 | INFO | succes get
+2026-06-18 15:24:26,905 | INFO | try to get top agent
+2026-06-18 15:24:26,935 | ERROR | failed to get
+2026-06-18 15:25:01,698 | INFO | try to get top agent
+2026-06-18 15:25:01,737 | INFO | succes get
+2026-06-18 15:28:20,502 | INFO | trying to get by id
+2026-06-18 15:28:20,548 | ERROR | id not found
+2026-06-18 15:34:28,865 | INFO | trying to get by id
+2026-06-18 15:34:28,920 | INFO | succes get
+2026-06-18 15:34:32,976 | INFO | trying to get by id
+2026-06-18 15:34:32,981 | INFO | succes get
+2026-06-18 15:35:41,970 | INFO | trying to get by id
+2026-06-18 15:35:42,016 | INFO | succes get
+2026-06-18 15:37:03,117 | INFO | trying to deactivate id:1
+2026-06-18 15:37:13,016 | INFO | trying to deactivate id:s
+2026-06-18 15:37:57,836 | INFO | trying to deactivate id:1
+2026-06-18 15:38:28,695 | INFO | trying to deactivate id:1
+2026-06-18 15:38:28,739 | ERROR | agent alrredy deactivate
+2026-06-18 15:38:34,447 | INFO | trying to deactivate id:145
+2026-06-18 15:38:34,452 | ERROR | agent not found
+2026-06-18 15:38:47,197 | INFO | trying to deactivate id:145
+2026-06-18 15:38:47,202 | ERROR | agent not found
+2026-06-18 15:39:31,107 | INFO | trying to deactivate id:145
+2026-06-18 15:39:31,143 | ERROR | agent not found
+2026-06-18 15:39:39,456 | INFO | trying to deactivate id:1
+2026-06-18 15:39:39,474 | ERROR | agent alrredy deactivate
+2026-06-18 16:03:07,569 | INFO | trying to get status
+2026-06-18 16:03:07,594 | INFO | success get
+2026-06-18 16:03:16,823 | INFO | try to get top agent
+2026-06-18 16:03:16,829 | ERROR | failed to get
+2026-06-18 16:04:41,685 | INFO | try to get top agent
+2026-06-18 16:04:41,718 | ERROR | failed to get
+2026-06-18 16:05:22,495 | INFO | try to get top agent
+2026-06-18 16:05:22,571 | ERROR | failed to get
+2026-06-18 16:08:04,704 | INFO | triyng to get all missions
+2026-06-18 16:08:04,705 | INFO | succes get
+2026-06-18 16:08:57,438 | INFO | trying to create a new mission
+2026-06-18 16:08:57,441 | INFO | success created
+2026-06-18 16:09:52,424 | INFO | trying to create a new mission
+2026-06-18 16:09:52,529 | INFO | success created
+2026-06-18 16:10:28,956 | INFO | trying to create a new mission
+2026-06-18 16:10:29,004 | INFO | success created
+2026-06-18 16:10:38,018 | INFO | trying to create a new mission
+2026-06-18 16:10:38,103 | INFO | success created
+2026-06-18 16:12:23,257 | INFO | trying to get id :123
+2026-06-18 16:12:23,264 | ERROR | id not found
+2026-06-18 16:12:27,904 | INFO | trying to get id :1
+2026-06-18 16:12:27,910 | INFO | success get
+2026-06-18 16:29:39,653 | INFO | trying to start a mission
+2026-06-18 16:29:39,693 | ERROR | mission not found
+2026-06-18 16:29:46,062 | INFO | trying to start a mission
+2026-06-18 16:30:17,021 | INFO | trying to start a mission
+2026-06-18 16:34:15,021 | INFO | trying to start a mission
+2026-06-18 16:34:15,057 | ERROR | you cant start if not assigned
+2026-06-18 16:34:20,438 | INFO | trying to start a mission
+2026-06-18 16:35:25,013 | INFO | trying to start a mission
+2026-06-18 16:35:25,113 | INFO | succes start
+2026-06-18 16:37:54,564 | INFO | trying to complet a mission
+2026-06-18 16:37:54,609 | ERROR | you cant start if not assigned
+2026-06-18 16:38:02,659 | INFO | trying to complet a mission
+2026-06-18 16:38:02,755 | INFO | succes completed

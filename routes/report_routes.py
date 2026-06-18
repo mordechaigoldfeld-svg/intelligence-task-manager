@@ -15,7 +15,12 @@ router=APIRouter(prefix="/reports",tags=["reports"])
 
 @router.get("/summary")
 def get_sumary():
-    pass
+    lis=m_repo.count_all_missions(),m_repo.count_open_missions(),m_repo.count_by_status("completed"),m_repo.count_by_status("failed"),m_repo.count_critical_missions()
+    return lis
+
+
+
+
 
 
 @router.get("/missions-by-status")
@@ -41,6 +46,6 @@ def get_top_agent():
         return get
     logger.error("failed to get")
     
-    raise HTTPException(status_code=422,detail="check your sintax")
+    raise HTTPException(status_code=404,detail="not top agent now")
 
 
