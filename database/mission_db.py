@@ -5,24 +5,7 @@ from models.mission_model import MissionsData
 class MisssionDB:
     def __init__(self,db:DB_connection):
         self.db=db
-    
-    # def create_mission(self,data:MissionsData):
-    #     try:
-    #         connection=self.db.get_connection()
-    #         cursor=self.db.connection.cursor(dictionary=True)
-    #         cursor.execute("insert into missions(title,description,location,difficulty,importance,status) values (%s,%s,%s,%s,%s,%s);",(data.title,data.description,data.location,data.difficulty,data.importance,data.status))
-    #         connection.commit()
-            
-    #         agent_id=cursor.lastrowid
-            
-    #         cursor.execute("select * from missions where id=%s;",(agent_id,))
-            
-    #         agent=cursor.fetchone()
-            
-    #         return agent
-    #     except Exception as e:
-    #         return {"error":f"{e}"}
-        
+   
         
         
            
@@ -63,12 +46,12 @@ class MisssionDB:
         return cursor.rowcount
     
     
-    # def get_open_missions_by_agent(self,id):
-    #     connection=self.db.get_connection()
-    #     cursor=self.db.connection.cursor(dictionary=True)
-    #     cursor.execute("select status from missions;")
-    #     return cursor.fetchone()
-    #       select count(assigned_agent_id) as total_completed from missions where status='completed';
+    def get_open_missions_by_agent(self,id):
+        connection=self.db.get_connection()
+        cursor=self.db.connection.cursor(dictionary=True)
+        cursor.execute("select status from missions;")
+        return cursor.fetchone()
+        # select count(assigned_agent_id) as total_completed from missions where status='completed';
     
     
     

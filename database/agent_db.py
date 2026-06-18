@@ -90,17 +90,7 @@ class AgentDB:
     
     
     
-    # def get_agent_performance(self,id:int):
-    #     connection=self.db.get_connection()
-    #     cursor=self.db.connection.cursor(dictionary=True)
-    #     cursor.execute("select failed_missions,completed_missions from agents where id=%s;",(id,))
-    #     perform = cursor.fetchall()
-    #     cursor.execute("select failed_missions+completed_missions as total_missions from agents where id=%s;",(id,))
-    #     perform.append(cursor.fetchone())
-    #     # return milon
-    #     if perform[0]:
-    #         return perform
-    #     return None
+    
         
         
     
